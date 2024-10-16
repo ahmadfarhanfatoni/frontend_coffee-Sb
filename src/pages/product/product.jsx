@@ -9,7 +9,7 @@ const Product = () => {
   const getProduct = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/product?orderBy=id&sortBy=ASC"
+        `${process.env.REACT_APP_HOST}/product?orderBy=id&sortBy=ASC`
       );
       console.log(response);
       setProduct(response?.data?.data);
