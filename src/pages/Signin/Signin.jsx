@@ -13,7 +13,7 @@ const SignIn = () => {
   const login = async () => {
     setLoading(true); // Mulai loading saat klik login
     try {
-      const response = await axios.post("http://localhost:5000/auth/login", {
+      const response = await axios.post(`${process.env.REACT_APP_HOST}/auth/login`, {
         email,
         password,
       });
