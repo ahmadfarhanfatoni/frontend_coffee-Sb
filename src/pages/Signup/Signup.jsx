@@ -14,7 +14,7 @@ const SignUp = () => {
   const register = async () => {
     setLoading(true); // Mulai loading saat register
     try {
-      const response = await axios.post("http://localhost:5000/auth/register", {
+      const response = await axios.post(`${process.env.REACT_APP_HOST}/auth/register`, {
         email,
         password,
         phone,

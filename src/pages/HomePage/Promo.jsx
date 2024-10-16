@@ -7,7 +7,7 @@ const Promo = () => {
   const getProduct = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/promotion?orderBy=id&sortBy=ASC"
+        `${process.env.REACT_APP_HOST}/promotion?orderBy=id&sortBy=ASC`
       );
       console.log(response);
       setProduct(response?.data?.data);
