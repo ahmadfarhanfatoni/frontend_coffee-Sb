@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../HomePage/Navbar";
 import Footer from "../footer";
 import Promo from "../HomePage/Promo";
+import CartProduct from "../HomePage/CartProduct";
 
 const Product = () => {
   const [product, setProduct] = useState([]);
@@ -17,11 +18,11 @@ const Product = () => {
       console.log(error);
     }
   };
-  
+
   useEffect(() => {
     getProduct();
   }, []);
-  
+
   return (
     <div>
       <Navbar />
@@ -45,21 +46,9 @@ const Product = () => {
               Add-on
             </li>
           </ul>
-          <div className="grid grid-cols-4 gap-2">
-            {product.map((item) => {
-              return (
-                <div className="border shadow-lg shadow-gray-300 flex flex-col ml-7 items-center justify-between py-7 rounded-3xl">
-                  <img
-                    className="rounded-full shadow-lg shadow-gray-300 h-40 w-40"
-                    src={item.image}
-                    alt="product"
-                  />
-                  <div>
-                    <div className="font-bold text-[25px] text-center">{item.name}</div>
-                    <div className="text-orange-950 font-medium text-center">IDR {item.price}</div>
-                  </div>
-                </div>
-              );
+          <div className="grid grid-cols-4 gap-4 p-10 text-center font-bold text-xl">
+            {product.map((item, index) => {
+              return <CartProduct item={item} key={index} />;
             })}
           </div>
         </div>

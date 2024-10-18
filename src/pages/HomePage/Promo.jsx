@@ -25,7 +25,7 @@ const Promo = () => {
           <h1 className="flex flex-col text-center text-2xl font-bold text-red-950 py-10">
             Promo for you
           </h1>
-          <span className="">
+          <span className=" text-xs">
             {" "}
             Coupons will be update every weeks. <br /> Check them out
           </span>
@@ -33,20 +33,20 @@ const Promo = () => {
             <div className="flex items-center justify-center gap-8 py-10">
               {promo.map((item, index) => {
                 return (
-                  <div className="top-20 flex flex-col mt-28 absolute justify-center items-center gap-8 w-[225px] h-[330px] rounded-2xl bg-[#FF6A65] py-24">
+                  <div className="top-16 flex flex-col mt-28 absolute justify-center items-center gap-8 w-[210px] h-[330px] rounded-2xl bg-[#FF6A65]">
                     <div key={index[1]} className="flex flex-col items-center">
                       <img
-                        className="rounded-full w-40 h-40 shadow-lg py-1"
+                        className="rounded-full w-28 h-28 shadow-lg py-1"
                         src={item.image}
                       />
                       <div className="flex flex-col gap-y-2 text-[20px] font-extrabold">
                         {item.name}
                       </div>
-                      <div className="flex gap-y-2 text-center text-xs border-b-[1px] border-black border-dashed py-2 font-thin">
+                      <div className="flex gap-y-2 text-center text-xs border-b-[1px] border-black border-dashed py-3 font-thin">
                         {item.description}
                       </div>
-                      <div className="text-xl font-bold mb-2 mt-2 ">{item.code}</div>
-                      <div className="text-xs mb-4 ">{item.endDate}</div>
+                      <div className="text-xl font-bold mt-8 ">{item.code}</div>
+                      <div className="text-xs mt-8">{item.endDate}</div>
                     </div>
 
                     <div className="top-6 flex flex-col -z-[999] absolute justify-between left-16 items-start gap-8 w-4/5 h-100 rounded-3xl bg-black px-4 py-12">
@@ -90,7 +90,7 @@ const Promo = () => {
                 );
               })}
             </div>
-            <button className="justify-center items-center w-[240px] bg-[#6A4029] rounded-2xl text-white py-4 font-bold mb-6 mt-80">
+            <button className="justify-center items-center w-[210px] bg-[#6A4029] rounded-2xl text-white py-4 font-bold mb-6 mt-80">
               Apply Coupon
             </button>
             <div className=" flex-col gap-[5px] text-[#4F5665] text-left ml-5 list-none py-10">
