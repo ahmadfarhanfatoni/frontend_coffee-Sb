@@ -20,7 +20,7 @@ function App() {
           <Route path="/forgotpassword" element={<ForgotPw/>}/>
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/product" element={<Product/>}/>
-          <Route path="/singleproduct" element={<SingleProduct/>}/>
+          <Route path="/product/:id" element={<SingleProduct/>}/>
         </Routes>
       </BrowserRouter>
     </div>
